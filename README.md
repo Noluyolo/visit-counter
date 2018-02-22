@@ -14,5 +14,5 @@ If the above command gives you an error, try this sudo /etc/init.d/apache2 stop.
 And if still gives an error > docker rm php , try again and it should be successful.
 sudo apt install net-tools.
 Build an image on docker > docker build -t anyname/php:name-1.0.0.0.
- vi dockerfile ; cat dockerfile (insert text); docker exec -ti php bash.
+   vi dockerfile ; cat dockerfile (insert text); docker exec -ti php bash.
  chmod 777 counter.php ; chmod 777 countlog.txt
