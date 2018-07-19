@@ -4,8 +4,8 @@ Repository implementation
 # Prerequisites
 
 Install apache , PHP, 
-Install Docker, 
-Install net-tools.
+ Docker, 
+mysqli and net-tools.
 
 ## Installing
 
