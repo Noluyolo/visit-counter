@@ -17,14 +17,14 @@ https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mys
 
 # Coding style tests
 
-git init
-git status
-touch file
-git add file
-git commit -m" "
-git log
-git pull origin master
-git push -u origin master
+ git init
+ git status
+ touch file
+ git add file
+ git commit -m" "
+ git log
+ git pull origin master
+ git push -u origin master
 
 ## run with docker image built from Dockerfile
 
