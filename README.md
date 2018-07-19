@@ -31,4 +31,4 @@ Build an image on docker > docker build -t anyname/php:name-1.0.0.0.
  
  # Links
  
-Here is the code for the hit counter that you can use: http://justintadlock.com/web-design/counter.
+Here is the link for the hit counter that you can use: http://justintadlock.com/web-design/counter.
