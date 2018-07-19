@@ -32,3 +32,4 @@ Build an image on docker > docker build -t anyname/php:name-1.0.0.0.
  # Links
  
 Here is the link for the hit counter that you can use: http://justintadlock.com/web-design/counter.
+Docker image extended from https://hub.docker.com/_/php/
