@@ -35,7 +35,7 @@ docker build -t noluyolo/visit-counter .
 docker run --rm \
   -p 80:80 \
   --name visit-counter \
-  noloyolo/visit-counter
+  noluyolo/visit-counter
 ```
 
 ## run with official php docker image
