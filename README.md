@@ -5,24 +5,11 @@ Repository implementation
 # Description
 Two core concepts are conveyed in the vanilla example: 1) how to build your own docker from Dockerfile, and 2) how to mount a volume inside of a docker.
 
-# Prerequisites
-
-Install apache , PHP, Docker, mysqli and net-tools.
 
 ## Installing
 
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04.
 
-# Coding style tests
-```
- git init 
- git status
- touch file
- git add file
- git commit -m" "
- git log
- git pull origin master
- git push -u origin master
 ```
 
 ## Change file permissions of countlog.txt to add write access for all
