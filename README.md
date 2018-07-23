@@ -25,6 +25,12 @@ https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mys
  git push -u origin master
 ```
 
+## Change file permissions of countlog.txt to add write access for all
+Required if overwriting the web root with a volume. Already handled in Dockerfile when not mounting a volume.
+```
+chmod a+w scripts/countlog.txt
+```
+
 ## build docker image
 ```
 docker build -t noluyolo/visit-counter .
