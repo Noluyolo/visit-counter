@@ -1,0 +1,11 @@
+CREATE TABLE Yolos(
+        id int(15) not null auto_increment,
+        name vachar (10) not null,
+        gender varchar(15) not null,
+        PRIMARY KEY(id)
+        )
+
+        INSERT INTO Yolos values(1, 'Dialo', 'F');
+          INSERT INTO Yolos
+                SELECT (MAX(id1)+1) FROM Yolos;    
+
