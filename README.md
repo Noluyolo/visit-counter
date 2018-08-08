@@ -1,35 +1,60 @@
 # Project Title
+
 Repository implementation
 
-# Prerequisites
+# Description
+Two core concepts are conveyed in the vanilla example: 1) how to build your own docker from Dockerfile, and 2) how to mount a volume inside of a docker.
 
-Install apache , PHP, 
- Docker, 
-mysqli and net-tools.
 
 ## Installing
 
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04.
 
-# Coding style tests
+```
 
-I created repository > visit-counter.
-Switch from home direction to repository > cd visit-counter.
-Initialize this repository with README.md.
-Git commit " ".
-Add files (counter.php , countlog.txt 'put a (0) in it') > git touch filename ; gedit filename.
-Remote add origin > https://github.com/username/repo.git.
-Clone repo > SSH >git clone git@github.com:username/repo.git.
-Push to origin master > git push -u origin master.
+## Change file permissions of countlog.txt to add write access for all
+Required if overwriting the web root with a volume. Already handled in Dockerfile when not mounting a volume.
+```
+chmod a+w scripts/countlog.txt
+```
 
-If the above command gives you an error, try this sudo /etc/init.d/apache2 stop.
-And if still gives an error > docker rm php , try again and it should be successful.
-sudo apt 
-Build an image on docker > docker build -t anyname/php:name-1.0.0.0.
-   vi dockerfile ; cat dockerfile (insert text); docker exec -ti php bash.
- chmod 777 counter.php ; chmod 777 countlog.txt - gives permissions
+## build docker image
+```
+docker build -t noluyolo/visit-counter .
+```
+
+## run with docker image built from Dockerfile
+```
+docker run --rm \
+  -p 80:80 \
+  --name visit-counter \
+  noluyolo/visit-counter
+```
+
+## run with official php docker image
+```
+docker run --rm \
+  -p 80:80 \
+  --name php \
+  -v "$PWD/scripts":/var/www/html \
+  php:7.0-apache
+```
+
+# How to overwrite the web root with a volume at runtime
+```
+docker run --rm \
+  -p 80:80 \
+  --name visit-counter \
+  -v "$PWD/scripts":/var/www/html \
+  noluyolo/visit-counter
+```
+
+# How to access
+
+http://localhost/counter.php
+
  
- # Links
+# Links
  
 Here is the link for the hit counter that you can use: http://justintadlock.com/web-design/counter.
 
